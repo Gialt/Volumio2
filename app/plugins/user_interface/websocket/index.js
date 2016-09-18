@@ -622,7 +622,8 @@ function InterfaceWebUI(context) {
 
 				var returnedData = self.commandRouter.playListManager.createPlaylist(data.name);
 				returnedData.then(function (data) {
-					selfConnWebSocket.emit('pushCreatePlaylist', data);
+					//selfConnWebSocket.emit('pushCreatePlaylist', data);
+                    selfConnWebSocket.emit('pushListPlaylist', data);
 				});
 
 
